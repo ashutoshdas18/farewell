@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    height: 100vh;
+}
+.center-rocket{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+.top-header,.hidden-top>h1{
+    font-family: 'Sacramento', cursive;
+    color: #8aabca;
+}
+.hidden-top{
+    display: none;
+}
+.middle-header{
+    color: #273755;
+    font-family: 'Amatic SC', cursive;
+    font-size: 75px;
+} 
+.bottom-header,.hidden-bottom>p{
+    font-family: 'Lato', sans-serif;
+    color: #85b0d8;
+}
+.hidden-bottom
+{
+    display: none;
+}
+.center-rocket>img{
+    height: 320px;
+    margin-right: 20px;
+}
+.arr{
+    position: absolute;
+    left:50%;
+    top:90%;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {transform: translateY(0);}
+  60% {transform: translateY(-15px);}
+}
+
+
+.randCircle
+{
+    border-radius:50%;
+    background-color: #8aabca57;
+    position: absolute;
+}
+.one{
+   
+    left: 30%;
+    top: 20%;
+    width: 120px;
+    height: 120px;
+}
+.two{
+    left: 60%;
+    top: -10%;
+    width: 200px;
+    height: 200px;
+}
+.three{
+    width: 200px;
+    height: 200px;
+}
+.four{
+    width: 150px;
+    height: 150px;
+    top:40%;
+    right: 20%;
+}
+.five{
+     width: 150px;
+    height: 150px;
+    top:60%;
+    left:15%;
+}
+.leftcorner-top{
+    border-radius:50%;
+    background-color: #8aabca57;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -40px;
+    left: -40px;
+}
+@media only screen and (max-width:480px) {
+.top-header,.bottom-header{
+    display: none;
+}
+.middle-header{
+    margin-left: 20px;
+    font-size: 45px;
+} 
+.center-rocket>img{
+    height: 180px;
+    margin-right: 0;
+}
+.hidden-top{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.hidden-bottom{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 65%;
+    justify-content: center;
+    align-items: center;
+}
+.three,.five{
+    display: none;
+}
+}
