@@ -188,14 +188,12 @@
 }
 .card-container{
     position: absolute;
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     right: -150%;
     z-index: 5;
     transition:right 1s;
+    background-color: #55585c;
 }
 .mobile-content{
     display: none;
@@ -306,6 +304,8 @@
     color: white;
     font-family:'Courier New', Courier, monospace;
     margin-bottom: 20px;
+    display: flex;
+    margin-left: 5px;
 }
 
 .mobile-content>h1{
@@ -321,10 +321,8 @@
     color: white;
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: 20px;
-}
-.cardHolder{
-    height: 100vh;
-    width: 100vw;
+    display: flex;
+    margin-left: 5px
 }
 .card{
     height:100vh;
@@ -370,7 +368,7 @@
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 .gform{
     margin-bottom: 30px;

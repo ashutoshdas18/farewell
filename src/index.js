@@ -31,32 +31,10 @@ function card(){
         (function(){
             setTimeout(function(){
                 tags.close.style.display="inline";
-            },1000)
+            },3000)
         })();
-    },2000)
+    },7000)
 }
-
-//The timer
-
-// (
-//     function(){
-//         setInterval(function(){
-//             i--;
-//             if(i<0){
-//                 tags.timer.innerText = "";
-//                 clearInterval();
-//                 return;
-//             }
-//             tags.timer.innerText = i;
-//         },1000)
-//     }
-// )();
-
-tags.cardHolder.addEventListener('click',e=>{
-    tags.card.style.right ="-150%";
-    document.querySelector('body').style.overflowY ="scroll";
-    tags.close.style.display="none";
-})
 tags.close.addEventListener('click',e=>{
     tags.card.style.right ="-150%";
     document.querySelector('body').style.overflowY ="scroll";
