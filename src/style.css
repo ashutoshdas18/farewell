@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gluten&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
+.container{
+    position: relative;
+    overflow-x: hidden;
+    height: 200vh;
+    width: 100%;
+}
 .wrapper{
     height: 100vh;
+    position: relative;
 }
 .center-rocket{
     position: absolute;
@@ -39,22 +48,8 @@
 .center-rocket>img{
     height: 320px;
     margin-right: 20px;
+    transition: transform 1s;
 }
-.arr{
-    position: absolute;
-    left:50%;
-    top:90%;
-    animation-name: example;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes example {
-  0%   {transform: translateY(0);}
-  60% {transform: translateY(-15px);}
-}
-
-
 .randCircle
 {
     border-radius:50%;
@@ -64,31 +59,37 @@
 .one{
    
     left: 30%;
-    top: 20%;
+    top: 17%;
     width: 120px;
     height: 120px;
+    animation: motion1 2s infinite;
 }
 .two{
     left: 60%;
     top: -10%;
     width: 200px;
     height: 200px;
+    overflow-x: hidden;
+    animation: motion2 2s infinite;
 }
 .three{
     width: 200px;
     height: 200px;
+    animation: motion1 2s infinite;
 }
 .four{
     width: 150px;
     height: 150px;
     top:40%;
     right: 20%;
+    animation: motion2 2s infinite;
 }
 .five{
      width: 150px;
     height: 150px;
     top:60%;
     left:15%;
+    animation: motion1 2s infinite;
 }
 .leftcorner-top{
     border-radius:50%;
@@ -99,7 +100,151 @@
     top: -40px;
     left: -40px;
 }
+@keyframes motion1 {
+    60%{transform: translateX(-15px);}
+}
+@keyframes motion2 {
+    60%{transform: translateY(-15px);}
+}
+.arrow{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.arr{
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes example {
+  0%   {transform: translateY(0);}
+  60% {transform: translateY(-15px);}
+}
+.explore{
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: 'Gluten', cursive;
+    color:#c66334;
+}
+#midSect{
+    height: 100vh;
+    width: 100%;
+    background-image: url("Sprinkle.svg");
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+}
+
+.emo{
+    position:absolute;
+    bottom:100px;
+    z-index: 1;
+    animation: emo;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+@keyframes emo {
+    60%{transform: translateY(-100vh);}
+}
+.imageContainer{
+    background-color: #ededed;
+    width: 70vw;
+    height: 80vh;
+    border:  10px solid #aebdcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.imageContainer-img{
+
+    width: 60vw;
+    height: 70vh;
+    opacity: 1;
+
+}
+.imageContainer-Left{
+    margin-right: 10px;
+}
+.imageContainer-Right{
+    margin-left: 10px;
+}
+.indicator{
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    top:95%;
+    left:calc(50% - 35px);
+    display: flex;
+}
+
+.indicator-0,.indicator-1,.indicator-2{
+    width: 20px;
+    height: 5px;
+    margin-right: 10px;
+    border: 1px solid black;
+    transition: background-color 2s;
+    border-radius:  15px;
+}
+.card-container{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -150%;
+    z-index: 5;
+    transition:right 1s;
+}
+.mobile-content{
+    display: none;
+}
+.mobile-card{
+    display: none;
+}
+.cardHolder{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 650px;
+    width: 600px;
+    position: fixed;
+}
+.close{
+    display: none;
+    position: fixed;
+    top:calc(50vh - 320px);
+    right:calc(50vw - 290px);
+    color: white;
+    cursor: pointer;
+}
+.timer{
+    color: white;
+    flex: none;
+}
 @media only screen and (max-width:480px) {
+.wrapper{
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+}
 .top-header,.bottom-header{
     display: none;
 }
@@ -129,5 +274,119 @@
 }
 .three,.five{
     display: none;
+}
+
+.album{
+    grid-template-columns: auto auto;
+}
+.grid-item>img{
+    width: calc(50vw - 40px);
+    height: 100%;
+    /* object-fit:fill; */
+    border-radius: 12px;
+}
+/* Mid Sect */
+#midSect{
+    
+    justify-content: flex-start;
+}
+
+.imageContainer{
+    width: 100vw;
+    height: 90vw;
+    opacity: 1;
+    border-bottom: none;
+}
+.imageContainer>img{
+
+    width: 75vw;
+    height: 85vw;
+    object-fit:scale-down;
+}
+.imageContainer-Left,.imageContainer-Right{
+    display: none;
+}
+
+.mobile-content{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 90vw);
+    background-color: #1b315f;
+}
+.mobile-content>p{
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+.mobile-content>h1{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.gform{
+    margin-bottom: 30px;
+}
+.gform>p,.gform>a{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+.cardHolder{
+    height: 100vh;
+    width: 100vw;
+}
+.card{
+    height:100vh;
+    width: 100vw;
+    object-fit: contain;
+    position: fixed;
+}
+
+.close{
+    right: 10px;
+    top: 40vw;
+}
+}
+@media only screen and (min-width:500px) and (min-height:900px){
+    .imageContainer{
+    width: 100vw;
+    height: 90vw;
+    opacity: 1;
+    border-bottom: none;
+}
+.imageContainer>img{
+
+    width: 75vw;
+    object-fit:scale-down;
+}
+.mobile-content{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 90vw);
+    background-color: #1b315f;
+}
+.mobile-content>p{
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+.mobile-content>h1{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.gform{
+    margin-bottom: 30px;
+}
+.gform>p,.gform>a{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
 }
 }
