@@ -218,14 +218,21 @@
     position: fixed;
     top:calc(50vh - 320px);
     right:calc(50vw - 290px);
-    color: white;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     cursor: pointer;
+    text-align: center;
+}
+.close>h1{
+    color: #1b315f;
 }
 .timer{
     color: white;
     flex: none;
 }
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:480px)  {
 .wrapper{
     position: relative;
     height: 100vh;
@@ -261,7 +268,6 @@
 .three,.five{
     display: none;
 }
-
 .album{
     grid-template-columns: auto auto;
 }
@@ -279,19 +285,19 @@
 
 .imageContainer{
     width: 100vw;
-    height: 90vw;
+    overflow: hidden;
     opacity: 1;
     border-bottom: none;
+    overflow: hidden;
 }
 .imageContainer>img{
 
     width: 75vw;
-    height: 85vw;
-    object-fit:scale-down;
+    object-fit:contain;
 }
-.imageContainer-Left,.imageContainer-Right{
+/* .imageContainer-Left,.imageContainer-Right{
     display: none;
-}
+} */
 
 .mobile-content{
     display: flex;
@@ -324,16 +330,27 @@
     display: flex;
     margin-left: 5px
 }
+.gform>p
+{
+    animation: flick;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes flick{
+    60%{transform: translateY(10px);
+        opacity: 0;
+        }
+}
 .card{
     height:100vh;
     width: 100vw;
     object-fit: contain;
     position: fixed;
 }
-
 .close{
-    right: 10px;
-    top: 40vw;
+right: 10px;
+top: calc(50vh - 250px);
+
 }
 }
 @media only screen and (min-width:500px) and (max-width:900px){
@@ -379,5 +396,64 @@
     margin-bottom: 20px;
     display: flex;
     margin-left: 5px;
+}
+}
+@media only screen and (max-height:430px){
+ .center-rocket>img{
+    height:200px;
+}  
+.hidden-top{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    justify-content: center;
+    align-items: center;
+}
+.hidden-bottom{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top:70%;
+    left: 15%;
+    justify-content: center;
+    align-items: center;
+}
+.three,.five{
+    display: none;
+} 
+.top-header,.bottom-header{
+    display: none;
+}
+.middle-header{
+    margin-left: 20px;
+    font-size: 45px;
+} 
+.explore{
+    display: none;
+}
+.card{
+    height:100vh;
+    width: 100vw;
+    object-fit: contain;
+}
+.close{
+    right: 35%;
+    top: 5vh;
+}
+   .imageContainer{
+    width: 100vw;
+    opacity: 1;
+    border-bottom: none;
+    border-top: none;
+    overflow: hidden;
+}
+#midSect{
+    overflow: hidden;
+    justify-content: flex-start;
+}
+.mobile-content{
+    flex-wrap: wrap;
 }
 }

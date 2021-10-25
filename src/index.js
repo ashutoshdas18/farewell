@@ -1,6 +1,8 @@
 window.onload = function(){
     document.querySelector('.rocket-img').style.transform="translateX(10px)";
-    console.log("Hello");
+    if(window.innerHeight<750){
+        document.querySelector('.bottom-para').style.display="none";
+    }
         card();
         myFunction();
 };
@@ -30,7 +32,8 @@ function card(){
         tags.card.style.right ="0";
         (function(){
             setTimeout(function(){
-                tags.close.style.display="inline";
+                tags.close.style.display="flex";
+                tags.close.style.justifyContent="center";
             },3000)
         })();
     },7000)
