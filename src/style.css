@@ -171,14 +171,14 @@
 }
 .indicator{
     position: absolute;
-    width: 70px;
+    width: 100px;
     height: 10px;
     top:95%;
     left:calc(50% - 35px);
     display: flex;
 }
 
-.indicator-0,.indicator-1,.indicator-2{
+.indicator-0,.indicator-1,.indicator-2,.indicator-3,.indicator-4{
     width: 20px;
     height: 5px;
     margin-right: 10px;

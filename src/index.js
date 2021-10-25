@@ -16,6 +16,8 @@ const tags={
     indicator0:document.querySelector('.indicator-0'),
     indicator1:document.querySelector('.indicator-1'),
     indicator2:document.querySelector('.indicator-2'),
+    indicator3:document.querySelector('.indicator-3'),
+    indicator4:document.querySelector('.indicator-4'),
     arr:document.querySelector('.arr'),
     explore:document.querySelector('.explore'),
     card:document.querySelector('.card-container'),
@@ -49,7 +51,7 @@ tags[`indicator${num}`].style.backgroundColor = 'red';
 tags.imageLeft.addEventListener("click",e=>{
     tags[`indicator${num}`].style.backgroundColor="white";
     if(num<=0){
-        num =3;
+        num =4;
     }
     num--;
     tags.centerImage.src=`img-${num}.jpg`;
@@ -58,7 +60,7 @@ tags.imageLeft.addEventListener("click",e=>{
 
 tags.imageRight.addEventListener("click",e=>{
     tags[`indicator${num}`].style.backgroundColor="white";
-    if(num>=2)
+    if(num>=4)
     {
         num=-1;
     }
@@ -71,7 +73,7 @@ function myFunction() {
   setInterval(function(){
     tags[`indicator${num}`].style.backgroundColor="white";
      num++
-     if(num>2){
+     if(num>4){
          num=0;
      }
      tags[`indicator${num}`].style.backgroundColor = 'red';
