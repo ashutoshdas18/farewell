@@ -3,6 +3,10 @@ window.onload = function(){
     if(window.innerHeight<750){
         document.querySelector('.bottom-para').style.display="none";
     }
+    if(window.innerHeight<670){
+        document.querySelector('.explore').style.display ="none";
+        document.querySelector('.arr').style.top= "38%";
+    }
         card();
         myFunction();
 };
